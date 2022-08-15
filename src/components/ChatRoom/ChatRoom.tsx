@@ -13,6 +13,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import "../../App.css";
 import { Firestore } from "../../utils/firestore";
 import { ChatMessage } from "../ChatMessage/ChatMessage";
+import { SignOut } from "../SignOut/SignOut";
 
 interface User {
   uid: string;
@@ -65,6 +66,10 @@ export const ChatRoom = () => {
 
   return (
     <>
+      <header>
+        <h1>⚛️🔥💬</h1>
+        <SignOut />
+      </header>
       <main>
         {messages &&
           messages.map((msg: any, index) => (
